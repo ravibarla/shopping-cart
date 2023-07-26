@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import { useState } from "react";
+import "./App.css";
+import CustomItemContext from "./ItemContext";
+import Items from "./components/Items";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CustomItemContext>
+        <div className="App">
+          <h2>Shopping Cart</h2>
+          <Navbar />
+          <Items />
+        </div>
+      </CustomItemContext>
+    </>
   );
 }
-
 export default App;
